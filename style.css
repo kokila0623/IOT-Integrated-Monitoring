@@ -279,3 +279,35 @@ footer {
         white-space: nowrap;
     }
 }
+
+/* Make all five dashboard sections equal in width */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#dashboard,
+.dashboard,
+.cards,
+.card-container {
+    width: 100% !important;
+    max-width: 1025px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+}
+
+main .card {
+    width: 100% !important;
+    max-width: 1025px !important;
+    min-height: 100px;
+}
+
+#prediction,
+.prediction {
+    width: 100% !important;
+    max-width: 1025px !important;
+    margin: 25px auto !important;
+}
