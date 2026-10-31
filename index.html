@@ -12,21 +12,35 @@
 <header>
     <h1>Smart Gas Monitoring System</h1>
     <p>IoT Integrated Smart Gas Real Time Monitoring and Alerting System</p>
+
+    <!-- Firebase Connection Status -->
+    <div id="firebaseStatus" class="firebase-status">
+        <span class="status-dot"></span>
+        <span id="firebaseStatusText">Firebase: Checking connection...</span>
+    </div>
 </header>
 
 <main>
+
+    <!-- Login Section -->
     <section id="login">
         <h2>Firebase Login</h2>
+
         <input type="email" id="email" placeholder="Firebase email">
+
         <input type="password" id="password" placeholder="Firebase password">
+
         <button id="loginBtn">Login and View Dashboard</button>
+
         <p id="loginMessage">Please log in to view your LPG records.</p>
     </section>
 
+    <!-- Dashboard Section -->
     <section id="dashboard">
         <h2>LPG Monitoring Dashboard</h2>
 
         <div class="container">
+
             <div class="card">
                 <h3>Latest Cylinder Weight</h3>
                 <p id="weight">-- kg</p>
@@ -46,18 +60,22 @@
                 <h3>Daily Consumption</h3>
                 <p id="consumption">-- kg/day</p>
             </div>
+
         </div>
     </section>
 
+    <!-- Prediction Section -->
     <section id="prediction">
         <h2>LPG Refill Prediction</h2>
         <p id="predictionResult">Waiting for Firebase data...</p>
     </section>
 
+    <!-- History Section -->
     <section id="history">
         <h2>Daily LPG History</h2>
         <div id="historyTable"></div>
     </section>
+
 </main>
 
 <footer>
