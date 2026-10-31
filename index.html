@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,77 +7,66 @@
     <title>Smart Gas Monitoring System</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header>
-        <h1>Smart Gas Monitoring System</h1>
-        <p>IoT Integrated Smart Gas Real Time Monitoring and Alerting System</p>
-    </header>
+<header>
+    <h1>Smart Gas Monitoring System</h1>
+    <p>IoT Integrated Smart Gas Real Time Monitoring and Alerting System</p>
+</header>
 
-    <nav>
-        <a href="#dashboard">Dashboard</a>
-        <a href="#monitoring">Monitoring</a>
-        <a href="#prediction">Prediction</a>
-        <a href="#about">About</a>
-    </nav>
+<main>
+    <section id="login">
+        <h2>Firebase Login</h2>
+        <input type="email" id="email" placeholder="Firebase email">
+        <input type="password" id="password" placeholder="Firebase password">
+        <button id="loginBtn">Login and View Dashboard</button>
+        <p id="loginMessage">Please log in to view your LPG records.</p>
+    </section>
 
-    <main>
+    <section id="dashboard">
+        <h2>LPG Monitoring Dashboard</h2>
 
-        <section id="dashboard">
-            <h2>System Dashboard</h2>
-            <p>Monitor your LPG cylinder in real time.</p>
-        </section>
-
-        <section id="monitoring">
-            <h2>Live Sensor Monitoring</h2>
-
-            <div class="container">
-
-                <div class="card">
-                    <h3>Cylinder Weight</h3>
-                    <p id="weight">-- kg</p>
-                </div>
-
-                <div class="card">
-                    <h3>LPG Remaining</h3>
-                    <p id="lpg">-- %</p>
-                </div>
-
-                <div class="card">
-                    <h3>Gas Leakage Status</h3>
-                    <p id="gas">Waiting...</p>
-                </div>
-
-                <div class="card">
-                    <h3>Temperature</h3>
-                    <p id="temperature">-- °C</p>
-                </div>
-
+        <div class="container">
+            <div class="card">
+                <h3>Latest Cylinder Weight</h3>
+                <p id="weight">-- kg</p>
             </div>
-        </section>
 
-        <section id="prediction">
-            <h2>LPG Refill Prediction</h2>
-            <p id="predictionResult">Waiting for Firebase data...</p>
-        </section>
+            <div class="card">
+                <h3>LPG Remaining</h3>
+                <p id="lpg">-- kg</p>
+            </div>
 
-        <section id="about">
-            <h2>About the Project</h2>
-            <p>
-                This project monitors LPG cylinder weight, gas leakage
-                and temperature using ESP32 and sensors. Sensor readings
-                are sent to Firebase for remote monitoring and analysis.
-            </p>
-        </section>
+            <div class="card">
+                <h3>LPG Percentage</h3>
+                <p id="percentage">-- %</p>
+            </div>
 
-    </main>
+            <div class="card">
+                <h3>Daily Consumption</h3>
+                <p id="consumption">-- kg/day</p>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <p>IoT Integrated Smart Gas Real Time Monitoring and Alerting System</p>
-    </footer>
+    <section id="prediction">
+        <h2>LPG Refill Prediction</h2>
+        <p id="predictionResult">Waiting for Firebase data...</p>
+        <p id="equation"></p>
+        <p id="rSquared"></p>
+    </section>
 
-    <script type="module" src="script.js"></script>
+    <section id="history">
+        <h2>Daily LPG History</h2>
+        <div id="historyTable"></div>
+    </section>
+</main>
+
+<footer>
+    <p>IoT Integrated Smart Gas Real Time Monitoring and Alerting System</p>
+</footer>
+
+<script type="module" src="script.js"></script>
 
 </body>
 </html>
