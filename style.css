@@ -347,3 +347,95 @@ main .card {
     border-radius: 50%;
     font-size: 21px;
 }
+
+/* Firebase connection indicator */
+
+.firebase-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    margin-top: 15px;
+    padding: 9px 18px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background: #f4c542;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.firebase-status.connected .status-dot {
+    background: #55e58a;
+}
+
+.firebase-status.disconnected .status-dot {
+    background: #ff6262;
+}
+
+/* Alerts and Notifications */
+
+#alerts {
+    width: 100%;
+    max-width: 1025px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+#alerts h2 {
+    text-align: center;
+    color: #354b0d;
+    margin-bottom: 20px;
+}
+
+.alert-card {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    padding: 18px 24px;
+    margin-bottom: 14px;
+    background: #ffffff;
+    border: 1px solid #dce7c7;
+    border-left: 6px solid #9aaa72;
+    border-radius: 13px;
+    box-shadow: 0 4px 12px rgba(40, 60, 15, 0.08);
+}
+
+.alert-icon {
+    font-size: 27px;
+}
+
+.alert-card h3 {
+    color: #354b0d;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.alert-card p {
+    color: #64705a;
+    font-size: 14px;
+}
+
+.alert-card.warning {
+    border-left-color: #e6a52e;
+    background: #fffaf0;
+}
+
+.alert-card.danger {
+    border-left-color: #d94343;
+    background: #fff3f3;
+}
+
+.alert-card.normal {
+    border-left-color: #39945b;
+    background: #f2fbf4;
+}
