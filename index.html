@@ -35,7 +35,7 @@
         <p id="loginMessage">Please log in to view your LPG records.</p>
     </section>
 
-    <!-- Dashboard Section -->
+    <!-- LPG Monitoring Dashboard -->
     <section id="dashboard">
         <h2>LPG Monitoring Dashboard</h2>
 
@@ -64,13 +64,53 @@
         </div>
     </section>
 
-    <!-- Prediction Section -->
+    <!-- Alerts and Notifications -->
+    <section id="alerts">
+
+        <h2>Alerts and Notifications</h2>
+
+        <!-- Gas Leakage Alert -->
+        <div class="alert-card" id="gasAlert">
+            <span class="alert-icon">⚠️</span>
+            <div>
+                <h3>Gas Leakage Alert</h3>
+                <p id="gasAlertMessage">
+                    Waiting for MQ-2 sensor data...
+                </p>
+            </div>
+        </div>
+
+        <!-- Low LPG Alert -->
+        <div class="alert-card" id="lpgAlert">
+            <span class="alert-icon">🔥</span>
+            <div>
+                <h3>Low LPG Alert</h3>
+                <p id="lpgAlertMessage">
+                    Waiting for LPG level data...
+                </p>
+            </div>
+        </div>
+
+        <!-- High Temperature Alert -->
+        <div class="alert-card" id="temperatureAlert">
+            <span class="alert-icon">🌡️</span>
+            <div>
+                <h3>High Temperature Alert</h3>
+                <p id="temperatureAlertMessage">
+                    Waiting for DHT11 sensor data...
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- LPG Refill Prediction -->
     <section id="prediction">
         <h2>LPG Refill Prediction</h2>
         <p id="predictionResult">Waiting for Firebase data...</p>
     </section>
 
-    <!-- History Section -->
+    <!-- Daily LPG History -->
     <section id="history">
         <h2>Daily LPG History</h2>
         <div id="historyTable"></div>
