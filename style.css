@@ -311,3 +311,39 @@ main .card {
     max-width: 1025px !important;
     margin: 25px auto !important;
 }
+
+/* Dashboard reading icons */
+
+.card h3 {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.card:nth-child(1) h3::before {
+    content: "⚖️";
+}
+
+.card:nth-child(2) h3::before {
+    content: "🔥";
+}
+
+.card:nth-child(3) h3::before {
+    content: "📊";
+}
+
+.card:nth-child(4) h3::before {
+    content: "📅";
+}
+
+.card h3::before {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    background: #edf3dc;
+    border-radius: 50%;
+    font-size: 21px;
+}
