@@ -164,13 +164,6 @@ function calculatePrediction(readings) {
 
     const latest = readings[readings.length - 1];
 
-    document.getElementById("equation").textContent =
-        "Regression Equation: y = " +
-        m.toFixed(4) + "x + " + c.toFixed(4);
-
-    document.getElementById("rSquared").textContent =
-        "Regression R²: " + rSquared.toFixed(4);
-
     if (m < 0) {
         const consumption = -m;
         const days = latest.lpg / consumption;
