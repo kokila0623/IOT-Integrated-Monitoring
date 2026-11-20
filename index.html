@@ -1,128 +1,262 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Smart Gas Monitoring System</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
+
     <h1>Smart Gas Monitoring System</h1>
-    <p>IoT Integrated Smart Gas Real Time Monitoring and Alerting System</p>
+
+    <p>
+        IoT Integrated Smart Gas Real Time Monitoring and Alerting System
+    </p>
 
     <!-- Firebase Connection Status -->
     <div id="firebaseStatus" class="firebase-status">
+
         <span class="status-dot"></span>
-        <span id="firebaseStatusText">Firebase: Checking connection...</span>
+
+        <span id="firebaseStatusText">
+            Firebase: Checking connection...
+        </span>
+
     </div>
+
 </header>
 
 <main>
 
     <!-- Login Section -->
     <section id="login">
+
         <h2>Firebase Login</h2>
 
-        <input type="email" id="email" placeholder="Firebase email">
+        <input
+            type="email"
+            id="email"
+            placeholder="Firebase email"
+        >
 
-        <input type="password" id="password" placeholder="Firebase password">
+        <input
+            type="password"
+            id="password"
+            placeholder="Firebase password"
+        >
 
-        <button id="loginBtn">Login and View Dashboard</button>
+        <button id="loginBtn">
+            Login and View Dashboard
+        </button>
 
-        <p id="loginMessage">Please log in to view your LPG records.</p>
+        <p id="loginMessage">
+            Please log in to view your LPG records.
+        </p>
+
     </section>
+
 
     <!-- LPG Monitoring Dashboard -->
     <section id="dashboard">
+
         <h2>LPG Monitoring Dashboard</h2>
 
         <div class="container">
 
             <div class="card">
+
                 <h3>Latest Cylinder Weight</h3>
+
                 <p id="weight">-- kg</p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>LPG Remaining</h3>
+
                 <p id="lpg">-- kg</p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>LPG Percentage</h3>
+
                 <p id="percentage">-- %</p>
+
             </div>
 
+
             <div class="card">
+
                 <h3>Daily Consumption</h3>
+
                 <p id="consumption">-- kg/day</p>
+
             </div>
 
         </div>
+
     </section>
+
+
+    <!-- Additional Sensor Monitoring -->
+    <section id="sensorMonitoring">
+
+        <h2>Sensor Monitoring</h2>
+
+        <div class="container">
+
+            <div class="card">
+
+                <h3>MQ-2 Gas Sensor</h3>
+
+                <p id="gasValue">--</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Temperature</h3>
+
+                <p id="temperature">-- °C</p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Humidity</h3>
+
+                <p id="humidity">-- %</p>
+
+            </div>
+
+        </div>
+
+        <p class="last-updated">
+            Last Updated:
+            <span id="lastUpdated">--</span>
+        </p>
+
+    </section>
+
 
     <!-- Alerts and Notifications -->
     <section id="alerts">
 
         <h2>Alerts and Notifications</h2>
 
+
         <!-- Gas Leakage Alert -->
         <div class="alert-card" id="gasAlert">
+
             <span class="alert-icon">⚠️</span>
+
             <div>
+
                 <h3>Gas Leakage Alert</h3>
+
                 <p id="gasAlertMessage">
                     Waiting for MQ-2 sensor data...
                 </p>
+
             </div>
+
         </div>
+
 
         <!-- Low LPG Alert -->
         <div class="alert-card" id="lpgAlert">
+
             <span class="alert-icon">🔥</span>
+
             <div>
+
                 <h3>Low LPG Alert</h3>
+
                 <p id="lpgAlertMessage">
                     Waiting for LPG level data...
                 </p>
+
             </div>
+
         </div>
+
 
         <!-- High Temperature Alert -->
         <div class="alert-card" id="temperatureAlert">
+
             <span class="alert-icon">🌡️</span>
+
             <div>
+
                 <h3>High Temperature Alert</h3>
+
                 <p id="temperatureAlertMessage">
                     Waiting for DHT11 sensor data...
                 </p>
+
             </div>
+
         </div>
 
     </section>
 
+
     <!-- LPG Refill Prediction -->
     <section id="prediction">
+
         <h2>LPG Refill Prediction</h2>
-        <p id="predictionResult">Waiting for Firebase data...</p>
+
+        <p id="predictionResult">
+            Waiting for Firebase data...
+        </p>
+
     </section>
+
 
     <!-- Daily LPG History -->
     <section id="history">
+
         <h2>Daily LPG History</h2>
-        <div id="historyTable"></div>
+
+        <div id="historyTable">
+
+            <p>Waiting for daily records...</p>
+
+        </div>
+
     </section>
 
 </main>
 
+
+<!-- Footer -->
 <footer>
-    <p>IoT Integrated Smart Gas Real Time Monitoring and Alerting System</p>
+
+    <p>
+        IoT Integrated Smart Gas Real Time Monitoring and Alerting System
+    </p>
+
 </footer>
 
+
+<!-- JavaScript -->
 <script type="module" src="script.js"></script>
 
 </body>
+
 </html>
