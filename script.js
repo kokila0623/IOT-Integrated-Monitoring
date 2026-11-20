@@ -18,7 +18,7 @@ import {
 const firebaseConfig = {
     apiKey: "AIzaSyBH-3391eeczMmJcQc1Cuer9G6DjebHLzQ",
     authDomain: "iot-integrated-smartmonitoring.firebaseapp.com",
-    databaseURL: "https://iot-integrated-smartmonitoring-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    databaseURL: https://iot-integrated-smartmonitoring-default-rtdb.asia-southeast1.firebasedatabase.app/",
     projectId: "iot-integrated-smartmonitoring",
     appId: "1:572982811499:web:1c51514440b4f754064a2e"
 };
